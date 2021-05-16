@@ -1,0 +1,77 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+
+    {% if messages %}
+
+        {% for message in messages %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              {{ message }}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+        {% endfor %}
+
+    {% endif %}
+
+{% endwith %}
+<br/>
+<h1 class="text-center"> Update property details </h1>
+<br/>
+<div class="container">
+    <form method="POST">
+        <div class="raw">
+            <div class="col-lg-3">
+                <div class="form-group">
+
+                    {{ form.hotel_name.label }}
+                    {{ form.hotel_name(class_="form-control") }}
+
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="form-group">
+
+                    {{ form.address.label }}
+                    {{ form.address(class_="form-control") }}
+
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="form-group">
+
+                    {{ form.room_quantity.label }}
+                    {{ form.room_quantity(class_="form-control") }}
+
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="form-group">
+
+                    {{ form.stars.label }}
+                    {{ form.stars(class_="form-control") }}
+
+                </div>
+            </div>
+
+        </div>
+        <div class="raw">
+            <div class="col-lg-3">
+                <div class="form-group">
+
+                    {{ form.hidden_tag() }}
+                    {{ form.update(class_= "btn btn-primary") }}
+
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

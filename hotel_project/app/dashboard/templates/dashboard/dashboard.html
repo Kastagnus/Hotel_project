@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+
+{% block content %}
+<br/>
+<br/>
+<br/>
+<div class="row">
+    <div class="col-lg-4">
+
+            <p>You are logged in as:</p>
+            <p>{{ company_name }}</p>
+
+    </div>
+
+    <div class="col-lg-4">
+
+            <p>Your Identification number: </p>
+           <p> {{ tax_id }}</p>
+
+    </div>
+
+    <div class="col-lg-4">
+            <p> Responsible persion </p>
+            <p>{{ name }} {{ last_name }}</p>
+
+    </div>
+
+
+</div>
+
+{% endblock %}

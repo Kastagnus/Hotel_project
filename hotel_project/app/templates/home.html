@@ -1,0 +1,12 @@
+{% extends "main.htlm" %}
+
+{% block navbar %}
+{% if current_user.is_authenticated %}
+    <a class="btn btn-primary" href="{{ url_for('login.login') }}"> Dashboard </a>
+    <a class="btn btn-primary" href="{{ url_for('register.register') }}"> Property </a>
+    <a class="btn btn-primary" href="{{ url_for('register.register') }}"> Manage Property </a>
+{% else %}
+    <a class="btn btn-primary" href="{{ url_for('login.login') }}"> Log in </a>
+    <a class="btn btn-primary" href="{{ url_for('register.register') }}"> Registration </a>
+{% endif %}
+{% endblock %}
