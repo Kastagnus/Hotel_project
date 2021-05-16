@@ -6,5 +6,5 @@
 ### Flask framework and SQLAlchemy is used for core operations
 
 ## Deployment
-### Install file requirements.txt by "pip install requirements.txt"
+### Install file requirements.txt by "pip install -r requirements.txt"
 ### Add configuration wih file path in "hotel_project\manager.py" and add parameter of runserver
